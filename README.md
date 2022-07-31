@@ -1,23 +1,41 @@
-### nextjs-admin-template
+# Paljs CRUD Example
 
-Admin dashboard template based on Next.js with [@paljs/ui](https://github.com/paljs/ui) component package
+## 참고
 
-#### Setup:
+<https://www.eunchurn.com/blog/development/2022-07-31-tWIL>
 
-```
-git clone https://github.com/paljs/nextjs-admin-template.git
+## schema.prisma
 
-cd nextjs-admin-template
+`.env`: backend
 
-yarn install
-
-yarn dev
+```env
+DATABASE_URL=postgresql://postgres:password@localhost:5432/apidb?schema=public&connection_limit=5
 ```
 
-![screenshot](./src/images/screenshot1.png)
+```prisma
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
 
-![screenshot](./src/images/screenshot2.png)
+generator client {
+  provider        = "prisma-client-js"
+  binaryTargets   = ["native"]
+  previewFeatures = ["metrics"]
+}
 
-![screenshot](./src/images/screenshot3.png)
+/// 사용자
+model User {
+  id    String @id @default(cuid())
+  name  String
+  posts Post[]
+}
 
-![screenshot](./src/images/screenshot4.png)
+/// 포스트
+model Post {
+  id       String  @id @default(cuid())
+  title    String
+  content  String
+  author   User?   @relation(fields: [authorId], references: [id])
+  authorId String?
+}
