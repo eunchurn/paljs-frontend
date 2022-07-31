@@ -1,13 +1,13 @@
-import { Button } from '@paljs/ui/Button';
-import { InputGroup } from '@paljs/ui/Input';
-import { Checkbox } from '@paljs/ui/Checkbox';
-import React from 'react';
-import styled from 'styled-components';
-import Link from 'next/link';
+import { Button } from "@paljs/ui/Button";
+import { InputGroup } from "@paljs/ui/Input";
+import { Checkbox } from "@paljs/ui/Checkbox";
+import React from "react";
+import styled from "styled-components";
+import Link from "next/link";
 
-import Auth from 'components/Auth';
-import Layout from 'Layouts';
-import Socials from 'components/Auth/Socials';
+import Auth from "components/Auth";
+import Layout from "Layouts";
+import Socials from "components/Auth/Socials";
 
 const Input = styled(InputGroup)`
   margin-bottom: 2rem;
@@ -34,7 +34,7 @@ export default function Register() {
             <input type="password" placeholder="Confirm Password" />
           </Input>
           <Checkbox checked onChange={onCheckbox}>
-            Agree to{' '}
+            Agree to{" "}
             <Link href="/">
               <a>Terms & Conditions</a>
             </Link>
@@ -45,7 +45,7 @@ export default function Register() {
         </form>
         <Socials />
         <p>
-          Already have an account?{' '}
+          Already have an account?{" "}
           <Link href="/auth/login">
             <a>Log In</a>
           </Link>

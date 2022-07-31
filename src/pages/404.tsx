@@ -1,10 +1,10 @@
-import React from 'react';
-import { Card, CardBody } from '@paljs/ui/Card';
-import { ButtonLink } from '@paljs/ui/Button';
-import { useRouter } from 'next/router';
-import styled from 'styled-components';
+import React from "react";
+import { Card, CardBody } from "@paljs/ui/Card";
+import { ButtonLink } from "@paljs/ui/Button";
+import { useRouter } from "next/router";
+import styled from "styled-components";
 
-import Layout from 'Layouts';
+import Layout from "Layouts";
 
 const ErrorStyle = styled.div`
   width: 100%;
@@ -31,7 +31,12 @@ export default function Error(): JSX.Element {
           <ErrorStyle>
             <h1>404 Page Not Found</h1>
             <small>The page you were looking for doesn&apos;t exist</small>
-            <ButtonLink fullWidth appearance="hero" onClick={() => router.push('/')} shape="Rectangle">
+            <ButtonLink
+              fullWidth
+              appearance="hero"
+              onClick={() => router.push("/")}
+              shape="Rectangle"
+            >
               Take me home
             </ButtonLink>
           </ErrorStyle>

@@ -1,6 +1,6 @@
-import { createGlobalStyle, css } from 'styled-components';
-import GlobalStyle from '@paljs/ui/GlobalStyle';
-import { breakpointDown } from '@paljs/ui/breakpoints';
+import { createGlobalStyle, css } from "styled-components";
+import GlobalStyle from "@paljs/ui/GlobalStyle";
+import { breakpointDown } from "@paljs/ui/breakpoints";
 
 const SimpleLayout = createGlobalStyle`
 ${({ theme }) => css`
@@ -15,7 +15,7 @@ ${({ theme }) => css`
   .auth-layout {
     .main-content {
       padding: 2.5rem;
-      ${breakpointDown('sm')`
+      ${breakpointDown("sm")`
         padding: 0;
       `}
     }
@@ -25,9 +25,9 @@ ${({ theme }) => css`
     transition: transform 0.3s ease;
     width: 19rem;
     overflow: hidden;
-    transform: translateX(${theme.dir === 'rtl' && '-'}100%);
+    transform: translateX(${theme.dir === "rtl" && "-"}100%);
     &.start {
-      transform: translateX(${theme.dir === 'ltr' && '-'}100%);
+      transform: translateX(${theme.dir === "ltr" && "-"}100%);
     }
 
     &.expanded,
@@ -51,7 +51,7 @@ ${({ theme }) => css`
     }
   }
 
-  ${breakpointDown('xs')`
+  ${breakpointDown("xs")`
     .main-content {
         padding: 0.75rem !important;
       }

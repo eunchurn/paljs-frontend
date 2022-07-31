@@ -5,12 +5,15 @@
   "version": "0.1.0",
   "author": "Ahmed Elywa",
   "dependencies": {
+    "@apollo/client": "^3.6.9",
     "@ckeditor/ckeditor5-build-classic": "29.2.0",
     "@ckeditor/ckeditor5-react": "3.0.2",
+    "@paljs/admin": "^4.0.20",
     "@paljs/icons": "1.0.5",
     "@paljs/ui": "1.1.1",
     "@tinymce/tinymce-react": "3.12.6",
     "babel-plugin-styled-components": "^1.13.2",
+    "graphql": "^16.5.0",
     "next": "^11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -24,9 +27,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "next",
+    "dev": "next --port 3005",
     "build": "next build",
-    "start": "next start --port ${PORT-3000}",
+    "start": "next start --port ${PORT-3005}",
     "export": "yarn build && next export -o _static",
     "prepare": "husky install"
   },
@@ -38,6 +41,7 @@
     "url": "https://github.com/paljs/nextjs-admin-template/issues"
   },
   "devDependencies": {
+    "@paljs/cli": "^4.1.0",
     "@types/node": "16.7.10",
     "@types/react": "17.0.19",
     "@types/react-dom": "17.0.9",

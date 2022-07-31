@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { Card, CardBody } from '@paljs/ui/Card';
-import { breakpointDown } from '@paljs/ui/breakpoints';
-import React from 'react';
+import styled from "styled-components";
+import { Card, CardBody } from "@paljs/ui/Card";
+import { breakpointDown } from "@paljs/ui/breakpoints";
+import React from "react";
 
 const AuthStyle = styled.div<{ subTitle?: string }>`
   margin: auto;
@@ -12,7 +12,7 @@ const AuthStyle = styled.div<{ subTitle?: string }>`
     font-weight: 600;
   }
   & > h1 {
-    margin-bottom: ${({ subTitle }) => (subTitle ? '0.75' : '2')}rem;
+    margin-bottom: ${({ subTitle }) => (subTitle ? "0.75" : "2")}rem;
     margin-top: 0;
     text-align: center;
   }
@@ -37,7 +37,7 @@ export const Group = styled.div`
 const CardAuth = styled(Card)`
   margin-bottom: 0;
   height: calc(100vh - 5rem);
-  ${breakpointDown('sm')`
+  ${breakpointDown("sm")`
     height: 100vh;
   `}
   ${CardBody} {
